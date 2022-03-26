@@ -1,0 +1,14 @@
+<form [formGroup]='searchForm'>
+  <mat-form-field appearance='outline'>
+    <mat-label>City Name</mat-label>
+    <input formControlName='cityName' matInput placeholder='Type city name here'>
+  </mat-form-field>
+  <mat-form-field appearance='outline'>
+    <mat-label>Period</mat-label>
+    <mat-select formControlName="period">
+      <mat-option *ngFor='let period of periods' [value]="period.value">
+        {{period.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

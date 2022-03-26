@@ -1,0 +1,20 @@
+<wf-search
+    (searchChanges)="search($event)"
+    [cityName]="cityName$ | async"
+    [period]="(period$ | async) || PeriodEnum.DAILY"></wf-search>
+<ng-container *ngIf="isLoading$ | async; else loaded">
+  <mat-spinner></mat-spinner>
+</ng-container>
+<ng-template #loaded>
+  <ng-container *ngIf="dataTable$ | async as dataTable; else noData">
+    <wf-temperature-table
+        [columns]="dataTable.columns"
+        [data]="dataTable.rows"
+        [period]="(period$ | async) || PeriodEnum.DAILY"></wf-temperature-table>
+  </ng-container>
+  <ng-template #noData>
+  <span>
+    {{(error$ | async) || 'Input a city name to find a weather forecast!'}}
+  </span>
+  </ng-template>
+</ng-template>

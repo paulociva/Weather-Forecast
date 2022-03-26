@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/weather/utils",
+  "sourceRoot": "libs/weather/utils/src",
+  "prefix": "weather-forecast",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/weather/utils"
+      ],
+      "options": {
+        "jestConfig": "libs/weather/utils/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/weather/utils/src/**/*.ts",
+          "libs/weather/utils/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

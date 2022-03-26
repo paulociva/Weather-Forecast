@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/weather/data-access",
+  "sourceRoot": "libs/weather/data-access/src",
+  "prefix": "wf",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/weather/data-access"
+      ],
+      "options": {
+        "jestConfig": "libs/weather/data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/weather/data-access/src/**/*.ts",
+          "libs/weather/data-access/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

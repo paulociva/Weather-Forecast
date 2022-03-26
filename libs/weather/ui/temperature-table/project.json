@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/weather/ui/temperature-table",
+  "sourceRoot": "libs/weather/ui/temperature-table/src",
+  "prefix": "wf",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/weather/ui/temperature-table"
+      ],
+      "options": {
+        "jestConfig": "libs/weather/ui/temperature-table/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/weather/ui/temperature-table/src/**/*.ts",
+          "libs/weather/ui/temperature-table/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

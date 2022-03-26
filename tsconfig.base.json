@@ -10,11 +10,33 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@weather-forecast/shared/environments": [
+        "libs/shared/environments/src/index.ts"
+      ],
+      "@weather-forecast/weather/data-access": [
+        "libs/weather/data-access/src/index.ts"
+      ],
+      "@weather-forecast/weather/feature": [
+        "libs/weather/feature/src/index.ts"
+      ],
+      "@weather-forecast/weather/ui/search": [
+        "libs/weather/ui/search/src/index.ts"
+      ],
+      "@weather-forecast/weather/ui/temperature-table": [
+        "libs/weather/ui/temperature-table/src/index.ts"
+      ],
+      "@weather-forecast/weather/utils": [
+        "libs/weather/utils/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

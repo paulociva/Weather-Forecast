@@ -1,0 +1,9 @@
+<table [dataSource]='data' mat-table>
+  <ng-container *ngFor='let column of columns' [matColumnDef]='column'>
+    <th *matHeaderCellDef mat-header-cell> {{column === 'City Name' ? column : (column  | timestampDate: period)}} </th>
+    <td *matCellDef='let element' mat-cell> {{element[column]}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef='columns' mat-header-row></tr>
+  <tr *matRowDef='let row; columns: columns;' mat-row></tr>
+</table>

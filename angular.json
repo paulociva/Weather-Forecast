@@ -1,7 +1,12 @@
 {
   "version": 2,
   "projects": {
-    "weather": "apps/weather",
-    "weather-e2e": "apps/weather-e2e"
+    "shared-environments": "libs/shared/environments",
+    "weather-data-access": "libs/weather/data-access",
+    "weather-feature": "libs/weather/feature",
+    "weather-forecast": "apps/weather-forecast",
+    "weather-ui-search": "libs/weather/ui/search",
+    "weather-ui-temperature-table": "libs/weather/ui/temperature-table",
+    "weather-utils": "libs/weather/utils"
   }
 }
